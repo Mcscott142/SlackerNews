@@ -1,0 +1,109 @@
+
+
+body {
+  font-family: Verdana;
+  font-size: 10pt;
+  color: #828282;
+  display: block;
+  background: #f6f6ef;
+  margin: 50px;
+  margin-top: 5px;
+  border: 2px;
+}
+
+.nav-container {
+  background: #ff6600;
+}
+
+.nav {
+  padding: 0;
+  margin: 0;
+
+}
+
+.nav > li {
+  display: inline-block;
+  list-style: none;
+
+}
+
+.nav > li > a{
+
+  display: block;
+  list-style: none;
+  color: #000000;
+  font-family: Verdana;
+  font-size: 10pt;
+  text-decoration: none;
+
+}
+
+#login {
+  float: right;
+  margin-right: 5px;
+}
+
+.main-container{
+  padding: 0;
+  margin: 0;
+  font-family: Verdana;
+  font-size: 10pt;
+  color: #828282;
+  background: #f6f6ef;
+  border-bottom: solid #ff6600;
+}
+
+.link-list{
+  padding: 0;
+  display: inline-block;
+
+}
+
+.link-title{
+
+}
+
+.link-title > a{
+  text-decoration: none;
+  color: #000000;
+  font-family: verdana;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+.link-domain{
+  font-family: Verdana;
+  font-size: 8pt;
+  color: #828282;
+
+}
+
+.link-points-comments{
+  font-family: Verdana;
+  font-size: 7pt;
+  color: #828282;
+
+}
+
+.footer-container{
+  padding: 0;
+  margin-left: 100px;
+}
+
+.footer-list > li {
+  display: inline-block;
+  list-style: none;
+
+}
+
+.footer-list > li > a{
+  font-family: Verdana;
+  font-size: 8pt;
+  color: #828282;
+
+}
+
+.search-container{
+  margin-left: 400px;
+}
+
