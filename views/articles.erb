@@ -40,13 +40,13 @@
 
 
       <label for="article_title">Article:</label>
-      <input type="text" id="article_title" name="title" />
+      <input type="text" id="article_title" name="title" required />
       <br>
       <label for="url">URL:</label>
-      <input type="link" id="url" name="url" />
+      <input type="link" id="url" name="url" required/>
       <br>
       <label for="task_name">Description:</label>
-      <input type="text" id="task_name" name="description" />
+      <input type="text" id="task_name" name="description" pattern=".{20,150}" "required/>
       <br>
       <input type="submit" />
 
@@ -83,35 +83,4 @@
 </body>
 
 </html>
-
-<script type="text/javascript">
-  function validateForm()
-{
-var x=document.forms["submit"]["title"].value;
-if (x==null || x=="")
-  {
-  alert("Article must be filled out.");
-  return false;
-  }
-
-  var x=document.forms["submit"]["url"].value;
-if (x==null || x=="")
-  {
-  alert("URL must be filled out.");
-  return false;
-  }
-
-  var x=document.forms["submit"]["description"].value;
-if (x==null || x=="")
-  {
-  alert("Description must be filled out.");
-  return false;
-  }
-}
-
-
-
-
-
-</script>
 
