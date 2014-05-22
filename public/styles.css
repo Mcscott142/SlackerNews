@@ -5,10 +5,13 @@ body {
   font-size: 10pt;
   color: #828282;
   display: block;
-  background: #f6f6ef;
+  background: ;
   margin: 50px;
   margin-top: 5px;
   border: 2px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .nav-container {
@@ -38,14 +41,19 @@ body {
 
 }
 
+#image {
+  border-style: solid;
+  border-color: #ff6600;
+}
+
 #login {
   float: right;
   margin-right: 5px;
 }
 
 .main-container{
-  padding: 0;
-  margin: 0;
+  padding-left: 60px;
+  padding-right: 60px
   font-family: Verdana;
   font-size: 10pt;
   color: #828282;

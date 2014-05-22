@@ -1,19 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Article Submission</title>
 
-<form action="/articles" method="post">
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+
+<div class="nav-container">
+
+    <ul class="nav">
+
+      <li id="image"><a href="#"><img src="https://news.ycombinator.com/y18.gif" width="15" height="15" style="border:1px #ffffff solid;"></a></li>
+
+      <li><a href="#"><b>Slacker News</b></a></li>
+
+      <li><a href="#"> new |</a></li>
+
+      <li><a href="#"> comments |</a></li>
+
+      <li><a href="#"> ask |</a></li>
+
+      <li><a href="#"> jobs |</a></li>
+
+      <li><a href="/articles"> submit</a></li>
+
+      <li id="login"><a href="#">login</a></li>
+
+    </ul>
+</div>
 
 
-  <label for="article_title">Article:</label>
-  <input type="text" id="article_title" name="title" />
+<div class="main-container">
 
-  <label for="url">URL:</label>
-  <input type="link" id="url" name="url" />
+  <center>
+    <form name="submit" action="/articles" onsubmit="return validateForm()" method="post">
 
 
-  <label for="task_name">Description:</label>
-  <input type="text" id="task_name" name="description" />
+      <label for="article_title">Article:</label>
+      <input type="text" id="article_title" name="title" />
+      <br>
+      <label for="url">URL:</label>
+      <input type="link" id="url" name="url" />
+      <br>
+      <label for="task_name">Description:</label>
+      <input type="text" id="task_name" name="description" />
+      <br>
+      <input type="submit" />
 
-<input type="submit" />
+    </form>
+  </center>
+</div>
 
-</form>
+<div class="footer-container">
+  <ul class="footer-list">
+    <li><a href="#"> Lists |</a></li>
+    <li><a href="#"> RSS |</a></li>
+    <li><a href="#"> Bookmarklet |</a></li>
+    <li><a href="#"> Guidelines |</a></li>
+    <li><a href="#"> FAQ |</a></li>
+    <li><a href="#"> DMCA |</a></li>
+    <li><a href="#"> News News |</a></li>
+    <li><a href="#"> Feature Requests |</a></li>
+    <li><a href="#"> Bugs |</a></li>
+    <li><a href="#"> Y Combinator |</a></li>
+    <li><a href="#"> Apply |</a></li>
+    <li><a href="#"> Library |</a></li>
+  </ul>
+</div>
 
+<div class="search-container">
+  <form>
+    <label>Search:</label>
+    <input type="search" name="search">
+  <!--<input type="submit" value="Search">-->
+  </form>
+</div>
+
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+  function validateForm()
+{
+var x=document.forms["submit"]["title"].value;
+if (x==null || x=="")
+  {
+  alert("Article must be filled out.");
+  return false;
+  }
+
+  var x=document.forms["submit"]["url"].value;
+if (x==null || x=="")
+  {
+  alert("URL must be filled out.");
+  return false;
+  }
+
+  var x=document.forms["submit"]["description"].value;
+if (x==null || x=="")
+  {
+  alert("Description must be filled out.");
+  return false;
+  }
+}
+
+
+
+
+
+</script>
 

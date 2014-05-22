@@ -38,97 +38,45 @@
 
       <ol class="link-list">
 
-        <li>
-          <h4 class="link-title">
-          <a href="https://www.firebase.com/blog/2013-08-15-firebase-leaves-beta-today.html">Firebase Leaves Beta Today <cite class="link-domain">(firebase.com)</cite> <br><span class="link-points-comments">63 points by lyime 56 minutes ago | 17 comments</span></a>
-          </h4>
-
-        </li>
+        <% @links.each do |article| %>
 
         <li>
-          <h4 class="link-title">
-          <a href="http://fitzgeraldnick.com/weblog/50/">Destructuring Assignment in ECMAScript 6 <cite class="link-domain">(fitzgeraldnick.com)</cite> <br><span class="link-points-comments">40 points by mnemonik 49 minutes ago | 5 comments</span></a>
-          </h4>
+        <h4 class="link-title">
+        <a href="<%= article[:url] %>"><%= article[:article] %>
+        <cite class="link-domain"><%= article[:url] %></cite>
+        <br>
+        <span class="link-points-comments"><%= article[:description] %></span></a></h4>
         </li>
 
-        <li>
-          <h4 class="link-title">
-          <a href="https://stripe.com/blog/introducing-stripe-uk">Introducing Stripe UK <cite class="link-domain">(stripe.com)</cite> <br><span class="link-points-comments">230 points by woodrow 4 hours ago | 118 comments</span></a>
-          </h4>
-        </li>
-
-        <li>
-          <h4 class="link-title">
-          <a href="http://ragnard.github.io/2013/08/12/datomic-in-the-browser.html">Datomic in the browser <cite class="link-domain">(ragnard.github.io)</cite> <br><span class="link-points-comments">47 points by brucehauman 2 hours ago | 1 comment</span></a>
-          </h4>
-        </li>
-
-
-        <li>
-          <h4 class="link-title">
-          <a href="https://developers.facebook.com/blog/post/2013/08/15/summary-of-the-august-13th-app-outage/"> Facebook App Outage Postmortem <cite class="link-domain">(facebook.com)</cite> <br><span class="link-points-comments">15 points by lacker 32 minutes ago | 2 comments</span></a>
-          </h4>
-        </li>
-
-        <li>
-          <h4 class="link-title">
-          <a href="http://techcrunch.com/2013/08/15/inks-new-mobile-framework-lets-ios-apps-talk-to-each-other-share-data-you-know-like-on-android/">  Ink (YC S12) Releases New iOS Layer That Allows Apps to Interact, Share Data <cite class="link-domain">(techcrunch.com)</cite> <br><span class="link-points-comments">19 points by betojuareziii 1 hour ago | 13 comments</span></a>
-          </h4>
-        </li>
-
-        <li>
-          <h4 class="link-title">
-          <a href="http://www.lettersofnote.com/2013/07/its-real-thing.html?m=1">It's the real thing <cite class="link-domain">(lettersofnote.com)</cite><br><span class="link-points-comments">75 points by ezl 3 hours ago | 44 comments</span></a>
-          </h4>
-        </li>
-
-
-        <li>
-          <h4 class="link-title">
-          <a href="http://firstround.com/article/The-anatomy-of-the-perfect-technical-interview-from-a-former-Amazon-VP">The anatomy of the perfect technical interview from a former Amazon VP <cite class="link-domain">(firstround.com)</cite><br><span class="link-points-comments">55 points by jnazario 3 hours ago | 26 comments</span></a>
-          </h4>
-        </li>
-
-        <li>
-          <h4 class="link-title">
-          <a href="http://www.washingtonpost.com/blogs/ask-the-post/wp/2013/08/15/editors-note/">The Washington Post Web site was hacked today <cite class="link-domain">(washingtonpost.com)</cite><br><span class="link-points-comments">34 points by selamattidur 2 hours ago | 26 comments</span></a>
-          </h4>
-        </li>
-
-
-        <li>
-          <h4 class="link-title">
-          <a href="http://stackoverflow.com/questions/16159203/why-does-this-java-program-terminate-despite-that-appears-that-it-shouldt-and"> Why does this Java program terminate despite appearing that it shouldn't? <cite class="link-domain">(stackoverflow.com)</cite><br><span class="link-points-comments">88 points by patmcguire 3 hours ago | 83 comments</span></a>
-          </h4>
-        </li>
+        <% end %>
     </ol>
   </div>
 
-    <div class="footer-container">
+  <div class="footer-container">
     <ul class="footer-list">
-    <li><a href="#"> Lists |</a></li>
-    <li><a href="#"> RSS |</a></li>
-    <li><a href="#"> Bookmarklet |</a></li>
-    <li><a href="#"> Guidelines |</a></li>
-    <li><a href="#"> FAQ |</a></li>
-    <li><a href="#"> DMCA |</a></li>
-    <li><a href="#"> News News |</a></li>
-    <li><a href="#"> Feature Requests |</a></li>
-    <li><a href="#"> Bugs |</a></li>
-    <li><a href="#"> Y Combinator |</a></li>
-    <li><a href="#"> Apply |</a></li>
-    <li><a href="#"> Library |</a></li>
+        <li><a href="#"> Lists |</a></li>
+        <li><a href="#"> RSS |</a></li>
+        <li><a href="#"> Bookmarklet |</a></li>
+        <li><a href="#"> Guidelines |</a></li>
+        <li><a href="#"> FAQ |</a></li>
+        <li><a href="#"> DMCA |</a></li>
+        <li><a href="#"> News News |</a></li>
+        <li><a href="#"> Feature Requests |</a></li>
+        <li><a href="#"> Bugs |</a></li>
+        <li><a href="#"> Y Combinator |</a></li>
+        <li><a href="#"> Apply |</a></li>
+        <li><a href="#"> Library</a></li>
     </ul>
-    </div>
+  </div>
 
-    <div class="search-container">
-<form>
-  <label>Search:</label>
-  <input type="search" name="search">
-  <!--<input type="submit" value="Search">-->
-</form>
-</div>
+  <div class="search-container">
+    <form>
+      <label>Search:</label>
+      <input type="search" name="search">
 
-  </body>
-  <!--</div>-->
+    </form>
+  </div>
+
+</body>
+
 </html>

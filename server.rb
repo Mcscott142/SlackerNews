@@ -2,10 +2,10 @@ require 'sinatra'
 require 'pry'
 require 'csv'
 
-def open_file(file)
+def open_file(csv)
   articles = []
-  CSV.foreach(csv, headers: true, headers_converters:  :symbol) do |article|
-    articles << article
+  CSV.foreach(csv, headers: true, header_converters: :symbol) do |article|
+  articles << article
   end
   articles
 end
@@ -13,6 +13,7 @@ end
 
 
 get '/' do
+  @links = open_file('articles.csv')
   erb :index
 end
 
@@ -30,5 +31,7 @@ post '/articles' do
 CSV.open('articles.csv', 'a') do |csv|
           csv << [title, url, description]
           end
+
   redirect '/'
+
 end
