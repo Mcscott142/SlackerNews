@@ -2,6 +2,16 @@ require 'sinatra'
 require 'pry'
 require 'csv'
 
+def open_file(file)
+  articles = []
+  CSV.foreach(csv, headers: true, headers_converters:  :symbol) do |article|
+    articles << article
+  end
+  articles
+end
+
+
+
 get '/' do
   erb :index
 end
