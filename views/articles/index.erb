@@ -27,7 +27,7 @@
 
         <li><a href="#"> jobs |</a></li>
 
-        <li><a href="/articles"> submit</a></li>
+        <li><a href="/articles/new "> submit</a></li>
 
         <li id="login"><a href="#">login</a></li>
 
@@ -38,14 +38,16 @@
 
       <ol class="link-list">
 
-        <% @links.each do |article| %>
+        <% @articles.each do |article| %>
 
         <li>
         <h4 class="link-title">
-        <a href="<%= article[:url] %>"><%= article[:article] %>
-        <cite class="link-domain"><%= article[:url] %></cite>
+        <%= article["title"] %>
+        <cite class="link-domain">
+        <a href="<%= article["url"] %>"><%= article["url"] %></a>
+        </cite>
         <br>
-        <span class="link-points-comments"><%= article[:description] %></span></a></h4>
+        <span class="link-points-comments"><%= article["description"] %></span></h4>
         </li>
 
         <% end %>
